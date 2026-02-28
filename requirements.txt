@@ -1,0 +1,12 @@
+edge-tts
+asyncio
+pygame
+openai-whisper
+sounddevice
+scipy
+numpy
+requests
+psutil
+pyperclip
+feedparser
+setuptools

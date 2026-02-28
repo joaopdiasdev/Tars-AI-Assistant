@@ -1,0 +1,11 @@
+# Temporários de Áudio
+res.mp3
+temp.wav
+
+# Python
+__pycache__/
+*.pyc
+
+# Ambiente Virtual (se usar)
+venv/
+.env
