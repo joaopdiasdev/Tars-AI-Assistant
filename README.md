@@ -32,9 +32,11 @@ TARS is a high-performance virtual assistant inspired by Interstellar, specifica
 🧩 Software Dependencies
 
 TARS requires specific Linux system libraries for audio and clipboard management:
-
+```
 sudo apt update && sudo apt install -y ffmpeg libportaudio2 xclip xsel
+```
 🚀 Quick Start
+
 1️⃣ Clone the Repository
 ``` 
 git clone https://github.com/joaopdiasdev/Tars-AI-Assistant.git
