@@ -29,40 +29,64 @@ TARS is a high-performance virtual assistant inspired by Interstellar, specifica
 - **GPU:** NVIDIA GPU with CUDA support (8GB+ VRAM recommended for low latency).
 - **RAM:** 16GB+.
 
-### Software Dependencies
+🧩 Software Dependencies
+
 TARS requires specific Linux system libraries for audio and clipboard management:
-```bash
+
 sudo apt update && sudo apt install -y ffmpeg libportaudio2 xclip xsel
-
 🚀 Quick Start
+1️⃣ Clone the Repository
+``` 
+git clone https://github.com/joaopdiasdev/Tars-AI-Assistant.git
+cd Tars-AI-Assistant
+```
 
-    Clone the repository:
-    Bash
+2️⃣ Set Up the Environment
 
-    git clone [https://github.com/YOUR_USERNAME/tars-assistant.git](https://github.com/YOUR_USERNAME/tars-assistant.git)
-    cd tars-assistant
+Make sure you have Python 3 installed. Then create and activate a virtual environment:
+```
+python3 -m venv venv
+source venv/bin/activate
+```
 
-    Setup the environment:
-    Make sure you have a Python Virtual Environment active:
-    Bash
+Install the required dependencies:
+```
+pip install -r requirements.txt
+```
+3️⃣ Run TARS
 
-    python3 -m venv venv
-    source venv/bin/activate
-    pip install -r requirements.txt
+Make the start script executable:
+```
+chmod +x tars_start.sh
+```
 
-    Run TARS:
-    Bash
+Then run:
+```
+./tars_start.sh
+```
+---
 
-    chmod +x tars_start.sh
-    ./tars_start.sh
+## 📂 Project Structure
 
-📂 Project Structure
-File	Function
-tars_gui.py	Main GUI interface and event loop.
-tars_utils.py	The "Engine" (Voice, AI, System Commands, Weather).
-requirements.txt	Python library dependencies.
-tars_start.sh	Shell script for quick startup.
-.gitignore	Prevents local cache and audio files from being uploaded.
-🤝 Contributing
+Here’s how the project is organized and what each file is responsible for:
+
+- ### tars_gui.py
+The main interface of TARS. It handles the application window, buttons, and the overall user interaction flow.
+
+- ### tars_utils.py
+The “brain” of the project. This is where voice processing, AI integration, system commands, and weather features are managed.
+
+- ### requirements.txt
+Contains all the Python dependencies required to run the project.
+
+- ### tars_start.sh
+A simple shell script that makes starting TARS quick and easy.
+
+- ### .gitignore
+Ensures unnecessary files (like cache, virtual environments, and temporary audio files) aren’t uploaded to GitHub.
+
+---
+
+## 🤝 Contributing
 
 Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
