@@ -19,7 +19,7 @@ TARS is a high-performance virtual assistant inspired by Interstellar, specifica
 - **🖥️ Linux Mint System Control:**
     - App Management: Launch VS Code, Discord, Spotify, and Terminal via voice.
     - Web Automation: Hands-free Google searches and clipboard translation.
-- **📊 Smart Briefing:** Personalized morning reports including local weather (Curitiba) and real-time news via RSS.
+- **📊 Smart Briefing:** Personalized morning reports including local weather and real-time news via RSS.
 
 ---
 
