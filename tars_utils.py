@@ -106,9 +106,10 @@ def limpar_comando(texto: str):
     return temp.strip()
 
 def obter_clima():
-    """Busca o clima de Curitiba com timeout estendido e fallback."""
+    """Busca o clima de determinada cidade com timeout estendido e fallback. """
     try:
         # Aumentamos o timeout para 8s e forçamos o lang=pt
+        # just change to your city on the links
         res = requests.get("https://wttr.in/Curitiba?format=%C+%t&lang=pt", timeout=8)
         if res.status_code == 200 and "Unknown" not in res.text:
             return res.text.replace("+", " ").strip()
