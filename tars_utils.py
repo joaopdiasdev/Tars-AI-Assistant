@@ -106,18 +106,24 @@ def limpar_comando(texto: str):
     return temp.strip()
 
 def obter_clima():
+<<<<<<< HEAD
     """Busca o clima de determinada cidade com timeout estendido e fallback. """
     try:
         # Aumentamos o timeout para 8s e forçamos o lang=pt
         # just change to your city on the links
         res = requests.get("https://wttr.in/Curitiba?format=%C+%t&lang=pt", timeout=8)
+=======
+    """Busca o clima de Curitiba com proteção contra lentidão da rede."""
+    try:
+        # Timeout de 5s para não travar o script principal
+        res = requests.get("https://wttr.in/Curitiba?format=%C+%t&lang=pt", timeout=5)
+>>>>>>> 2d79015 (fixes in tars_utils)
         if res.status_code == 200 and "Unknown" not in res.text:
+            # Limpa espaços extras e formata
             return res.text.replace("+", " ").strip()
-        
-        # Fallback caso o formato principal falhe
-        res_alt = requests.get("https://wttr.in/Curitiba?format=3&lang=pt", timeout=8)
-        return res_alt.text.strip() if res_alt.status_code == 200 else "indisponível"
-    except:
+        return "indisponível"
+    except Exception:
+        # Se a internet cair ou o site demorar, o TARS continua o briefing
         return "indisponível no momento"
 
 def obter_noticias():
